@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patas &amp; Cia — Gestão do petshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="lateral">
+    <h1 class="marca">Patas<br>&amp; Cia</h1>
+    <nav id="menu" aria-label="Seções"></nav>
+    <p class="nota">Painel ligado à API REST em <code>/api</code></p>
+  </aside>
+
+  <main>
+    <header class="topo">
+      <h2 id="titulo"></h2>
+      <button id="btn-novo" class="btn principal" type="button"></button>
+    </header>
+    <div id="conteudo" class="area-tabela" aria-live="polite"></div>
+  </main>
+
+  <dialog id="dialogo">
+    <form id="formulario" novalidate>
+      <h3 id="dlg-titulo"></h3>
+      <div id="campos"></div>
+      <p id="dlg-erro" class="erro" role="alert" hidden></p>
+      <div class="acoes">
+        <button type="button" class="btn" id="btn-cancelar">Cancelar</button>
+        <button type="submit" class="btn principal">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="aviso" class="aviso" role="status" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
